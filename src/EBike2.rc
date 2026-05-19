@@ -1,0 +1,109 @@
+// Microsoft Visual C++ generated resource script.
+// EBike2.rc - Ressourcendatei fuer den E-Bike Uebersetzungsrechner
+//
+#include "Resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Aus der TEXTINCLUDE 2-Ressource generiert.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Deutsch (Deutschland) Ressourcen
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(65001)
+
+/////////////////////////////////////////////////////////////////////////////
+// Dialog
+//
+// Layout (Dialogeinheiten):
+//   490 x 374 DLU  ca. 735 x 748 Pixel (bei 96 DPI, 8pt MS Shell Dlg)
+//
+//  [Einstellungen]   y=  4 - 30
+//  [Tabelle]         y= 33 - 174
+//  [Grafik]          y=178 - 370
+//
+
+IDD_EBIKE2_DIALOG DIALOGEX 0, 0, 490, 374
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "E-Bike Übersetzungsverhältnis-Rechner"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    // ---- Gruppe: Einstellungen ----
+    GROUPBOX        "Einstellungen",        IDC_STATIC,              4,   4, 482, 27
+    LTEXT           "Kettenrad:",           IDC_STATIC,             10,  15,  38,  9
+    EDITTEXT        IDC_EDIT_CHAINRING,                             51,  13,  22, 12, ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Zähne",              IDC_STATIC,              75,  15,  22,  9
+    LTEXT           "Radgröße:",       IDC_STATIC,            104,  15,  42,  9
+    COMBOBOX        IDC_COMBO_WHEEL_SIZE,                          148,  13,  82, 70, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Berechnen",            IDC_BUTTON_CALCULATE,  237,  12,  58, 14
+    LTEXT           "",                     IDC_STATIC_CASSETTE,   302,  15, 180,  9
+
+    // ---- Gruppe: Uebersetzungstabelle ----
+    GROUPBOX        "Übersetzungstabelle  (i = Z_Kettenrad / Z_Ritzel  |  Entfaltung = i x Pi x d)",
+                    IDC_STATIC,                                      4,  33, 482, 140
+    CONTROL         "", IDC_LIST_GEAR_TABLE, "SysListView32",
+                    LVS_REPORT | LVS_NOSORTHEADER | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,
+                    10,  45, 470, 123
+
+    // ---- Gruppe: Grafik (Balkendiagramm) ----
+    GROUPBOX        "Grafik  -  Entfaltung in m/Umdrehung", IDC_STATIC,
+                                                              4, 177, 482, 193
+    CONTROL         "", IDC_STATIC_CHART, "Static",
+                    WS_GROUP,
+                    10, 188, 470, 179
+END
+
+/////////////////////////////////////////////////////////////////////////////
+// DESIGNINFO
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_EBIKE2_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN,   4
+        RIGHTMARGIN, 486
+        TOPMARGIN,    4
+        BOTTOMMARGIN, 370
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+// TEXTINCLUDE
+
+1 TEXTINCLUDE
+BEGIN
+    "Resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+    "#include \""afxres.h\""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// Icon
+IDR_MAINFRAME               ICON                    "res\\EBike2.ico"
+
+#endif    // Deutsch (Deutschland) Ressourcen
+/////////////////////////////////////////////////////////////////////////////
